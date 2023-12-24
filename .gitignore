@@ -1,0 +1,28 @@
+# Unity generated files
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+
+# Visual Studio files
+[Vv]isual[Bb]asic/
+[Aa]ssets/AssetStoreTools*
+
+# User-specific files
+*.DS_Store
+*.pidb
+*.meta
+
+# Auto-generated video thumbnails
+[Tt]humbs.db
+
+# Mono Auto Generated Files
+mono_crash.*
+
+# Unity3D generated meta files
+*.pidb.meta
+
+# Unity3D Generated File On Crash Reports
+sysinfo.txt
