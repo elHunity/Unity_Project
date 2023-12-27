@@ -10,7 +10,7 @@ public class CircleMovement : MonoBehaviour
         float horizontalInput = Input.GetAxis("Horizontal");
 
         // Calculate the movement vector
-        Vector2 movement = new Vector2(horizontalInput, 0f) * moveSpeed * Time.deltaTime;
+        Vector2 movement = new Vector2(horizontalInput, 0f) * moveSpeed;
 
         // Move the object
         transform.Translate(movement);
