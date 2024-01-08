@@ -2,14 +2,23 @@ using UnityEngine;
 
 public class CircleMovement : MonoBehaviour
 {
-    public float moveSpeed = 5.1333f; // Adjust this value to control the movement speed.
-    public float JumpForce = 5.1333f;
+    public float moveSpeed = 5.1333f; 
+    public float jumpForce = 5.1333f;
 
     public Rigidbody2D rb;
+    private bool isGrounded;
+
+
+    
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        // You can add collision logic here if needed
+    }
 
     void Update()
     {
-        // Get the horizontal input (left/right arrow keys or A/D keys)
+        {
         float horizontalInput = Input.GetAxis("Horizontal");
 
         // Calculate the movement vector
@@ -17,5 +26,16 @@ public class CircleMovement : MonoBehaviour
 
         // Move the object
         transform.Translate(movement);
+        }
+
+
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+
+    {
+        isGrounded = false;
+        GetComponent<Rigidbody2D>().AddForce(new Vector3(0,500,0));
     }
+
+    }
+
 }
